@@ -178,6 +178,9 @@ const MENU = [
       { n: "Masala Chai", p: 15 },
       { n: "Coffee", p: 25 },
       { n: "milk", p: 25 },
+      {n:"Sprite",p:25},
+      {n:"ThumbsUp",p:25},
+      {n:"Jeera Soda",p:10}
   
       // { n: "Fresh Lime Soda", p: 40 },
       // { n: "Sweet Lassi", p: 50 },
