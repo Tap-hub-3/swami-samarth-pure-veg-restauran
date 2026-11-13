@@ -1,18 +1,10 @@
-/* =========================================================
-   EDIT THIS FILE to change your menu, prices and contact info.
-   Each dish image must be saved as images/menu/<image-name>.jpg
-   (the image name is the dish name in lowercase with hyphens).
-   ========================================================= */
-
 const SITE = {
   // Digits only, with country code and no + or spaces. Example: 919876543210
-  whatsapp: "91XXXXXXXXXX",
+  whatsapp: "919172064646",
   // Shown on the website and used for the Call button
-  phoneDisplay: "+91 XXXXX XXXXX",
-  phoneDial: "+91XXXXXXXXXX",
+  phoneDisplay: "+91 9172064646",
+  phoneDial: "+919172064646",
   address: "Shop No., Street, Area, City, State, PIN",
-  // Paste the Google Maps share link of your restaurant here (optional).
-  // If left empty, a Google Maps search for the address above is used.
   mapLink: "",
   hours: "9:00 AM – 11:00 PM",
   whatsappMessage: "Namaste! I would like to place an order from Shri Swami Samarth Family Restaurant."
@@ -27,11 +19,13 @@ const MENU = [
     subtitle: "Quick bites with chai",
     items: [
       { n: "Misal Pav", p: 70, pop: true },
-      { n: "Vada Pav", p: 25, pop: true },
-      { n: "Samosa", p: 20 },
+      // { n: "Vada Pav", p: 25, pop: true },
+      // { n: "Samosa", p: 20 },
       { n: "Kanda Bhaji", p: 50 },
-      { n: "Sabudana Khichdi", p: 60 },
-      { n: "Paneer Pakoda", p: 120 }
+      { n: "Sabudana Khichdi", p: 70 },
+      { n: "Paneer Pakoda", p: 120 },
+      { n: "Bhaji", p: 20 },
+      { n: "Aalu Biryani", p: 30 }
     ]
   },
   {
@@ -39,13 +33,13 @@ const MENU = [
     name: "Fast Food",
     subtitle: "Sandwiches, burgers and pav bhaji",
     items: [
-      { n: "Pav Bhaji", p: 110, pop: true },
-      { n: "Cheese Pav Bhaji", p: 140 },
-      { n: "Veg Sandwich", p: 50 },
-      { n: "Grilled Sandwich", p: 80 },
-      { n: "Veg Burger", p: 70 },
-      { n: "French Fries", p: 70 },
-      { n: "Veg Pizza", p: 150 }
+      { n: "Pav Bhaji", p: 80, pop: true },
+      { n: "Cheese Pav Bhaji", p: 100 },
+      // { n: "Veg Sandwich", p: 50 },
+      // { n: "Grilled Sandwich", p: 80 },
+      // { n: "Veg Burger", p: 70 },
+      // { n: "French Fries", p: 70 },
+      // { n: "Veg Pizza", p: 150 }
     ]
   },
   {
@@ -53,12 +47,12 @@ const MENU = [
     name: "South Indian",
     subtitle: "Crisp dosas and soft idlis",
     items: [
-      { n: "Idli Sambar", p: 60 },
-      { n: "Medu Vada", p: 60 },
+      { n: "Idli Sambar", p: 50 },
+      { n: "Medu Vada", p: 50 },
       { n: "Plain Dosa", p: 70 },
       { n: "Masala Dosa", p: 90, pop: true },
-      { n: "Cheese Dosa", p: 110 },
-      { n: "Mysore Masala Dosa", p: 110 },
+      { n: "Cheese Dosa", p: 100 },
+      { n: "Paneer Dosa", p: 120 },
       { n: "Uttapam", p: 90 }
     ]
   },
@@ -70,10 +64,34 @@ const MENU = [
       { n: "Veg Fried Rice", p: 110 },
       { n: "Veg Hakka Noodles", p: 110, pop: true },
       { n: "Schezwan Noodles", p: 120 },
-      { n: "Veg Manchurian", p: 120 },
-      { n: "Gobi Manchurian", p: 120 },
-      { n: "Paneer Chilli", p: 160 },
-      { n: "Veg Spring Roll", p: 100 }
+      { n: "Veg Manchurian", p: 100 },
+      { n: "Gobi Manchurian", p: 110 },
+      { n: "Paneer Chilli", p: 180 },
+      
+      // { n: "Veg Spring Roll", p: 100 }
+    ]
+  },
+  {
+    id: "paneer",
+    name: "Paneer Specials",
+    subtitle: "Rich and creamy paneer dishes",
+    items: [
+      { n: "Paneer Masala", p: 180 },
+      { n: "Palak Paneer", p: 180 },
+      { n: "Paneer Matar", p: 180 },
+      { n: "Paneer Curry", p: 180 },
+      { n: "Paneer Banarasi", p: 180 },
+      { n: "Paneer Butter Masala", p: 190, pop: true },
+      { n: "Paneer Kadhai", p: 190 },
+      { n: "Paneer Chatpata", p: 190 },
+      { n: "Paneer Tikka Masala", p: 200 },
+      { n: "Shahi Paneer", p: 220 },
+      { n: "Paneer Hyderabadi", p: 200 },
+      { n: "Paneer Bhurji", p: 250 },
+      { n: "Kaju Paneer", p: 220 },
+      { n: "Paneer Mushroom", p: 240 },
+      { n: "Paneer Maratha", p: 220 },
+      { n: "Paneer Handi", p: 430 }
     ]
   },
   {
@@ -81,28 +99,63 @@ const MENU = [
     name: "Sabzi & Dal",
     subtitle: "Best with roti or rice",
     items: [
-      { n: "Paneer Butter Masala", p: 190, pop: true },
-      { n: "Kadai Paneer", p: 190 },
-      { n: "Palak Paneer", p: 180 },
-      { n: "Mix Veg", p: 130 },
-      { n: "Aloo Gobi", p: 120 },
-      { n: "Shev Bhaji", p: 130 },
+      { n: "Mix Veg", p: 170 },
+      { n: "Aloo Gobi", p: 150 },
+      { n: "Shev Bhaji", p: 140 },
       { n: "Dal Fry", p: 120 },
-      { n: "Dal Tadka", p: 130 }
+      { n: "Dal Tadka", p: 140 },
+      { n: "Chana Masala", p: 150 },
+      { n: "Aalu Palak", p: 150 },
+      { n: "Aalu Matar", p: 150 },
+      { n: "Tawa Besan", p: 150 },
+      { n: "Bhendi Fry", p: 160 },
+      { n: "Baigan Masala", p: 170 },
+      { n: "Dal Khichdi", p: 170 },
+      { n: "Baigan Hyderabadi", p: 190 },
+      { n: "Malai Methi", p: 190 },
+      { n: "Lasuni Methi", p: 190 },
+      { n: "Moong Methi", p: 190 },
+      { n: "Kaju Korma", p: 190 },
+      { n: "Veg Hyderabadi", p: 200 },
+      { n: "Mushroom Masala", p: 200 },
+      { n: "Veg KolhaPuri", p: 200 },
+      { n: "Methi Chaman", p: 200 },
+      // { n: "Mashroom curry", p: 200 },   ← removed: duplicate of "Mushroom Masala"
+      { n: "Gavran Curry", p: 200 },
+      { n: "Veg Patiala", p: 200 },
+      { n: "Kaju Curry", p: 220 }
     ]
   },
   {
-    id: "roti-rice",
-    name: "Roti & Rice",
-    subtitle: "Breads, rice and biryani",
+    id: "roti",
+    name: "Roti & Paratha",
+    subtitle: "Fresh breads and parathas",
     items: [
       { n: "Tandoori Roti", p: 15 },
       { n: "Butter Roti", p: 20 },
-      { n: "Butter Naan", p: 40 },
-      { n: "Jeera Rice", p: 90 },
-      { n: "Veg Pulao", p: 120 },
-      { n: "Veg Biryani", p: 150, pop: true },
-      { n: "Masala Papad", p: 35 }
+      { n: "Butter Tandoori Roti", p: 20 },
+      { n: "Butter Naan", p: 50 },
+      { n: "Laccha Paratha", p: 30 },
+      { n: "Butter Laccha Paratha", p: 35 },
+      { n: "Mix Veg Paratha", p: 100 },
+      { n: "Aalu Paratha", p: 70 },
+      { n: "Plain Paratha", p: 15 },
+      { n: "Chapati ", p: 10 }
+    ]
+  },
+  {
+    id: "rice",
+    name: "Rice & Biryani",
+    subtitle: "Rice, pulao and biryani",
+    items: [
+      {n:"Half Jeera rice",p:70},
+      { n: "Jeera Rice", p: 120 },
+      { n: "Veg Pulao", p: 140 },
+      { n: "Veg Biryani", p: 170, pop: true },
+      { n: "Masala Papad", p: 25 },
+      { n: "paneer pulav", p: 200 },
+      {n:"Steam Rice",p:100},
+      {n:"Roast Papad",p:15}
     ]
   },
   {
@@ -110,10 +163,11 @@ const MENU = [
     name: "Thali",
     subtitle: "A full meal on one plate",
     items: [
-      { n: "Special Veg Thali", p: 180, pop: true },
-      { n: "Maharashtrian Thali", p: 160 },
-      { n: "Mini Thali", p: 120 },
-      { n: "Pithla Bhakri", p: 110 }
+      { n: "Special Veg Thali", p: 150, pop: true },
+      { n: "Punjabi Rice Plate", p: 200 }
+      // { n: "Maharashtrian Thali", p: 160 },
+      // { n: "Mini Thali", p: 120 },
+      // { n: "Pithla Bhakri", p: 110 }
     ]
   },
   {
@@ -123,11 +177,12 @@ const MENU = [
     items: [
       { n: "Masala Chai", p: 15 },
       { n: "Coffee", p: 25 },
-      { n: "Buttermilk", p: 25 },
-      { n: "Fresh Lime Soda", p: 40 },
-      { n: "Sweet Lassi", p: 50 },
-      { n: "Cold Coffee", p: 70 },
-      { n: "Gulab Jamun", p: 40 }
+      { n: "milk", p: 25 },
+  
+      // { n: "Fresh Lime Soda", p: 40 },
+      // { n: "Sweet Lassi", p: 50 },
+      // { n: "Cold Coffee", p: 70 },
+      // { n: "Gulab Jamun", p: 40 }
     ]
   }
 ];
